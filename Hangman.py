@@ -132,7 +132,10 @@ lives = 7
 
 while lives>0: 
     string = str(input())
-    if len(string) == 1:
+    if len(string) >= 2:
+        print("Please enter only one letter at a time")
+    
+    else:
         if string == ""or string == " ":
             print("Thats a blank attempt.. try again")
         elif string not in guessed_words:
@@ -147,9 +150,7 @@ while lives>0:
                 not_guessed()
         else:
             print("You already guessed it.. try again")
-    
-    else:
-        print("Please enter only one letter at a time")
+        
     
 
 
